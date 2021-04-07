@@ -14,6 +14,7 @@ class ImagemCarro : AppCompatActivity() {
 
         if (nomeCarro.toString() == "Jetta") {
             carroImage.setImageResource(R.drawable.jetta)
+            
 
         } else if (nomeCarro.toString() == "Nivus") {
             carroImage.setImageResource(R.drawable.nivus)
