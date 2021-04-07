@@ -4,8 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.AdapterView
-import android.widget.ArrayAdapter
-import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -13,10 +11,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
+        // Variavel carros recebe recebe um array de strings
         val carros = arrayOf("Gol", "Jetta", "Voyage", "UP", "Polo", "Saveiro", "Fox",
                 "Virtus",  "Nivus")
 
+        // Variável descrição recebe um array de strings
         val descricao = arrayOf("Novo Gol com aparência esportiva sem perder a elegância.",
                 "Novo Jetta com aparência esportiva sem perder a elegância.",
                 "Novo Voyage com aparência esportiva sem perder a elegância.",
@@ -27,28 +26,17 @@ class MainActivity : AppCompatActivity() {
                 "Novo Virtus com aparência esportiva sem perder a elegância.",
                 "Novo Nivus com aparência esportiva sem perder a elegância.", )
 
+        // Variável imagemId recebe um arrays com o objeto de cada imagem
         val imagemId = arrayOf(R.drawable.gol, R.drawable.jetta, R.drawable.voyage, R.drawable.up,
                 R.drawable.polo, R.drawable.saveiro, R.drawable.fox, R.drawable.virtus,
                 R.drawable.nivus)
 
+        // Recebe a classe e passa as variáveis de acordo com cada argumento
         val novaListAdapter = MyListAdapter(this, carros, descricao, imagemId)
 
         list_view_carros.adapter = novaListAdapter
-//        list_view_carros.setOnItemClickListener(){
-//            adapterView, view, position, id ->
-//
-//            val itemAtPosicao = adapterView.getItemAtPosition(position)
-//            val itemIdPosicao = adapterView.getItemIdAtPosition(position)
-//
-//            Toast.makeText(this, "Click on item at $itemAtPosicao its item id " +
-//                    "$itemIdPosicao", Toast.LENGTH_LONG).show()
-//
-//        }
 
-//        val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, carros)
-
-//        list_view_carros.adapter = adapter
-
+        // recebe a lista adaptada e ao clicar chama outra intent com a imagem do carro
         list_view_carros.onItemClickListener = AdapterView.OnItemClickListener {
             parent, view, position, id ->
 

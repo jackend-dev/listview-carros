@@ -11,10 +11,8 @@ class ImagemCarro : AppCompatActivity() {
 
         var nomeCarro = intent.getStringExtra("imgCarro")
 
-
         if (nomeCarro.toString() == "Jetta") {
             carroImage.setImageResource(R.drawable.jetta)
-            
 
         } else if (nomeCarro.toString() == "Nivus") {
             carroImage.setImageResource(R.drawable.nivus)
@@ -39,9 +37,7 @@ class ImagemCarro : AppCompatActivity() {
 
         } else if (nomeCarro.toString() == "Voyage") {
             carroImage.setImageResource(R.drawable.voyage)
-
         }
-
 
     }
 }

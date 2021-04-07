@@ -15,8 +15,6 @@
             android:id="@+id/iconCarro"
             android:layout_width="141dp"
             android:layout_height="86dp"
-            android:src="@drawable/ic_launcher_background/"
-
             />
 
     <LinearLayout
@@ -46,9 +44,7 @@
             android:layout_marginTop="5dp"
             android:textSize="16sp"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
-
             />
-
 
     </LinearLayout>
     </LinearLayout>
